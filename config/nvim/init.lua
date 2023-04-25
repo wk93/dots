@@ -20,4 +20,17 @@ vim.opt.sidescrolloff = 8
 
 vim.g.mapleader = " "
 
+-- Navi between windows
+local opts = { noremap = true }
+vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
+vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
+vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
+vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
+
+-- Resize windows with arrows
+vim.keymap.set("n", "<S-j>", ":resize -2<CR>", opts)
+vim.keymap.set("n", "<S-k>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<S-h>", ":vertical resize -2<CR>", opts)
+vim.keymap.set("n", "<S-l>", ":vertical resize +2<CR>", opts)
+
 require("lazy").setup("plugins")

@@ -2,7 +2,7 @@ return {
 	'nvim-treesitter/nvim-treesitter',
 	config = function()
 		require 'nvim-treesitter.configs'.setup {
-		 ensure_installed = { "bash", "comment", "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore", "http", "javascript", "jsdoc", "json", "lua", "regex", "rust", "tsx", "typescript", "vim", "vimdoc", "yaml", "query" },
+		 ensure_installed = { "bash", "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore", "http", "javascript", "jsdoc", "json", "lua", "regex", "rust", "tsx", "typescript", "vim", "vimdoc", "yaml", "query", "svelte", "css" },
 		 highlight = {
 			 enable = true,
 			 additional_vim_regex_highlighting = false

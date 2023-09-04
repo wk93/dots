@@ -1,0 +1,29 @@
+ source ~/.dotfiles/antigen.zsh
+
+# english by default
+export LC_ALL=C
+
+# for signing
+export GPG_TTY=$(tty)
+
+# nvm lazy loading
+export NVM_LAZY_LOAD=true
+antigen bundle lukechilds/zsh-nvm
+
+alias vim="nvim"
+alias vi="nvim"
+
+
+# Tell Antigen that you're done.
+antigen apply
+
+# Boot tmux if tmux is exists
+if command -v tmux &>/dev/null &&
+    [ -n '$PS1' ] &&
+    [[ ! '$TERM' =~ screen ]] &&
+    [[ ! '$TERM' =~ tmux ]] &&
+    [ -z '$TMUX' ]; then
+    exec tmux
+fi
+export PATH="/usr/local/opt/curl/bin:$PATH"
+#eval "$(zellij setup --generate-auto-start zsh)"

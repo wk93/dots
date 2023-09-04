@@ -10,7 +10,7 @@ font:
       style: Italic
     size: 16.0
     offset:
-      y: 8 
+      y: 12 
 # TokyoNight Alacritty Colors
 colors:
   # Default colors
@@ -43,3 +43,6 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
     - { index: 17, color: '0xdb4b4b' }
+
+  use_thin_strokes: true
+

@@ -7,7 +7,6 @@ return {
 			"mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/nvim-cmp",
-			"NvChad/nvim-colorizer.lua",
 		},
 		config = function()
 			require("neodev").setup({

@@ -6,16 +6,18 @@ return {
       { "folke/neodev.nvim", opts = {} },
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "hrsh7th/nvim-cmp",
     },
     config = function()
       require("neodev").setup({
         -- add any options here, or leave empty to use the default settings
       })
 
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require('lspconfig')
 
-      -- example to setup lua_ls and enable call snippets
       lspconfig.lua_ls.setup({
+        capabilities = capabilities,
         settings = {
           Lua = {
             completion = {
@@ -38,7 +40,6 @@ return {
       ensure_installed = {
       },
     },
-    ---@param opts MasonSettings | {ensure_installed: string[]}
     config = function(_, opts)
       require("mason").setup(opts)
       local mr = require("mason-registry")

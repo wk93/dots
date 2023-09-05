@@ -1,2 +1,10 @@
 require("wk.core")
-require("wk.plugins")
+
+local opts = {
+	defaults = {
+		lazy = true
+	},
+   colorscheme = { "tokyonight" },
+}
+
+require("lazy").setup("wk.plugins", opts)
